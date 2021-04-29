@@ -239,7 +239,19 @@ export default function PrimarySearchAppBar() {
 
       <Divider className={classes.divider} variant="middle" />
 
-      <div className={classes.notification}></div>
+      <MenuItem className={classes.notification} onClick={handleMenuClose}>
+        <div className={classes.notificationTitle}>
+          <Typography variant="span">Nueva API de Retail</Typography>
+          <div className={classes.grow} />
+          <FiberManualRecord className={classes.newNotification} />
+        </div>
+        <Typography className={classes.title} variant="span">
+          Disponible una nueva API dirigida a Retail. ¡Pruébala ahora!
+        </Typography>
+        <Typography className={classes.title} variant="span">
+          Hace 5 minutos
+        </Typography>
+      </MenuItem>
     </Menu>
   );
 
@@ -308,7 +320,7 @@ export default function PrimarySearchAppBar() {
               </Badge>
             </IconButton>
             {/* profile */}
-            <div className={classes.profile}>
+            <div className={classes.profile} onClick={handleProfileMenuOpen}>
               <Avatar
                 className={classes.avatar}
                 alt="Remy Sharp"
